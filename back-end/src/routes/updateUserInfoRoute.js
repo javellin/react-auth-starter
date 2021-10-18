@@ -3,7 +3,7 @@ import { ObjectID } from "mongodb";
 import { getDbConnection } from "../db";
 
 export const updateUserInfoRoute = {
-  path: "/api/users/:userId",
+  path: "/auth-api/users/:userId",
   method: "put",
   handler: (req, res) => {
     const { authorization } = req.headers;

@@ -2,7 +2,7 @@ import bcrypt from "bcrypt";
 import { getDbConnection } from "../db";
 
 export const resetPasswordRoute = {
-  path: "/api/users/:passwordResetCode/reset-password",
+  path: "/auth-api/users/:passwordResetCode/reset-password",
   method: "put",
   handler: async (req, res) => {
     const { passwordResetCode } = req.params;

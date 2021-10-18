@@ -3,7 +3,7 @@ import { sendEmail } from "../util/sendEmail";
 import { getDbConnection } from "../db";
 
 export const forgotPasswordRoute = {
-  path: "/api/forgot-password/:email",
+  path: "/auth-api/forgot-password/:email",
   method: "put",
   handler: async (req, res) => {
     const { email } = req.params;

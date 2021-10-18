@@ -11,7 +11,7 @@ export const ForgotPasswordPage = () => {
 
   const onSubmitClicked = async () => {
     try {
-      await axios.put(`/api/forgot-password/${emailValue}`);
+      await axios.put(`/auth-api/forgot-password/${emailValue}`);
       setSuccess(true);
       setTimeout(() => {
         history.push("/login");

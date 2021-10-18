@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 import { sendEmail } from "../util/sendEmail";
 
 export const signUpRoute = {
-  path: "/api/signup",
+  path: "/auth-api/signup",
   method: "post",
   handler: async (req, res) => {
     const { email, password } = req.body;
@@ -44,7 +44,7 @@ export const signUpRoute = {
         from: "yanrochalves@gmail.com",
         subject: "Please verify your email",
         text: `
-          Thanks for signing up! to verify your email, click here: http://localhost:3000/verify-email/${verificationString}
+          Thanks for signing up! to verify your email, click here: http://localhost/auth/verify-email/${verificationString}
         `,
       });
     } catch (error) {

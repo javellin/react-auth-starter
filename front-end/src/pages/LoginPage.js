@@ -26,7 +26,7 @@ export const LoginPage = () => {
   useEffect(() => {
     const loadOauthUrl = async () => {
       try {
-        const response = await axios.get("/auth/google/url");
+        const response = await axios.get("/auth-api/google/url");
         const { url } = response.data;
 
         setGoogleOauthUrl(url);
@@ -39,7 +39,7 @@ export const LoginPage = () => {
   }, []);
 
   const onLoginClicked = async () => {
-    const response = await axios.post("/api/login", {
+    const response = await axios.post("/auth-api/login", {
       email: emailValue,
       password: passwordValue,
     });
@@ -47,7 +47,7 @@ export const LoginPage = () => {
     const { token } = response.data;
 
     setToken(token);
-    history.push("/");
+    location.href = `http://localhost/store`;
   };
 
   return (

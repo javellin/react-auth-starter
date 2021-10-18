@@ -1,7 +1,7 @@
 import { sendEmail } from "../util/sendEmail";
 
 export const testEmailRoute = {
-  path: "/api/test-email",
+  path: "/auth-api/test-email",
   method: "post",
   handler: async (req, res) => {
     try {

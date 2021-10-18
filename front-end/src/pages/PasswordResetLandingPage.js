@@ -13,7 +13,7 @@ export const PasswordResetLandingPage = () => {
 
   const onResetClicked = async () => {
     try {
-      await axios.put(`/api/users/${passwordResetCode}/reset-password`, {
+      await axios.put(`/auth-api/users/${passwordResetCode}/reset-password`, {
         newPassword: passwordValue,
       });
       setIsSuccess(true);

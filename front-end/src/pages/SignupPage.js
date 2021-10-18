@@ -14,7 +14,7 @@ export const SignupPage = () => {
   const history = useHistory();
 
   const onSignUpClicked = async () => {
-    const response = await axios.post("/api/signup", {
+    const response = await axios.post("/auth-api/signup", {
       email: emailValue,
       password: passwordValue,
     });

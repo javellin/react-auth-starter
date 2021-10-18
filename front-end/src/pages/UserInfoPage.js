@@ -31,7 +31,7 @@ export const UserInfoPage = () => {
   const saveChanges = async () => {
     try {
       const response = await axios.put(
-        `/api/users/${id}`,
+        `/auth-api/users/${id}`,
         {
           favoriteFood,
           hairColor,
@@ -51,7 +51,7 @@ export const UserInfoPage = () => {
   };
 
   const logOut = () => {
-    localStorage.removeItem("token");
+    localStorage.removeItem("frz-store-auth-token");
     history.push("/login");
   };
 

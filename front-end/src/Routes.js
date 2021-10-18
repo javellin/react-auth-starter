@@ -10,7 +10,7 @@ import { PasswordResetLandingPage } from "./pages/PasswordResetLandingPage";
 
 export const Routes = () => {
   return (
-    <Router>
+    <Router basename={process.env.REACT_APP_BASENAME}>
       <Switch>
         <PrivateRoute path="/" exact>
           <UserInfoPage />
